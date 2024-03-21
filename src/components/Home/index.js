@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Hidden, Typography, Button, Box, Grid } from "@material-ui/core";
-import AuthModal from "./components/Home/AuthModal";
+import AuthModal from "./AuthModal";
 
 const Home = () => {
   const [openAuthModal, setOpenAuthModal] = useState(false);
@@ -16,7 +16,7 @@ const Home = () => {
     >
       {openAuthModal && <AuthModal onClose={() => setOpenAuthModal(false)} />}
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="h4">Smoul</Typography>
+        <Typography variant="h4">Scissor</Typography>
         <Button onClick={() => setOpenAuthModal(true)} color="inherit">
           Login/Signup
         </Button>
@@ -63,5 +63,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
